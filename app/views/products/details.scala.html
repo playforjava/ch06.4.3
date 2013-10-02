@@ -7,7 +7,7 @@
   @helper.form(action = routes.Products.save()) {
     <fieldset>
       <legend>Product (@productForm("name").valueOr("New"))</legend>
-      @helper.inputText(productForm("ean"), '_label -> "EAN")
+      @helper.inputText(productForm("ean"), '_label -> "EAN", '_help -> "Must be exaclty 13 numbers.")
       @helper.inputText(productForm("name"),'_label -> "Name")
       @helper.inputText(productForm("date"),'_label -> "Date")
       @helper.inputText(productForm("peremptionDate"),'_label -> "Peremption date")
